@@ -1,17 +1,5 @@
-import { useEffect, useState } from "react";
-import { tasks as data } from "../assets/task";
-
-console.log(data);
-
-export const TaskList = () => {
-
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(()=>{
-    setTasks(data)
-  }, [])
-
-  if(tasks.length===0) return <h1>No hay Tareas!!!</h1>
+export const TaskList = ({tasks}) => {
+  if (tasks.length === 0) return <h1>No hay Tareas!!!</h1>;
 
   return (
     <div>
