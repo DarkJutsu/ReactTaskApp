@@ -18,6 +18,7 @@ export const FormTask = ({ createTask }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <input
+          required
           type="text"
           placeholder="Titulo de la Tarea"
           value={title}
@@ -37,7 +38,7 @@ export const FormTask = ({ createTask }) => {
           }}
         ></textarea>
         <br />
-        <button>Agregar Tarea</button>
+        <button className="btn">Agregar Tarea</button>
       </form>
     </div>
   );
