@@ -1,13 +1,12 @@
-export const TaskList = ({tasks}) => {
+import { Task } from "./Task";
+
+export const TaskList = ({ tasks }) => {
   if (tasks.length === 0) return <h1>No hay Tareas!!!</h1>;
 
   return (
     <div>
       {tasks.map((task) => (
-        <div key={task.id}>
-          <h1>{task.title}</h1>
-          <p>{task.descripcion}</p>
-        </div>
+        <Task key={task.id} task={task} />
       ))}
     </div>
   );

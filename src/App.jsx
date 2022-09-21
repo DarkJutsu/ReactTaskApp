@@ -11,13 +11,13 @@ function App() {
     setTasks(data);
   }, []);
 
-  const createTask = (title) => {
+  const createTask = (task) => {
     setTasks([
       ...tasks,
       {
-        id: tasks.length+1,
-        title,
-        descripcion: `Nueva descripcion`,
+        id: tasks.length + 1,
+        title: task.title,
+        descripcion: task.description,
       },
     ]);
   };
