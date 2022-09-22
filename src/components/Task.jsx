@@ -13,7 +13,7 @@ export const Task = ({ task }) => {
         <AiOutlineCloseCircle />
       </button>
       <h1 className="text-xl font-bold capitalize">{task.title}</h1>
-      <p className="text-gray-400">{task.descripcion}</p>
+      <p className="text-gray-400 capitalize">{task.descripcion}</p>
     </div>
   );
 };
